@@ -17,6 +17,11 @@
 </style>
 <body>
 <h1>Todo List</h1>
+<h2>${loginInfo}</h2>
+<h2>${loginInfo.mname}</h2>
+<form method ="post" action="/logout">
+    <button type="submit">로그아웃</button>
+</form>
 <div class = "todolist">
     <ul>
         <c:forEach var="dto" items="${dtolist}">
@@ -27,13 +32,8 @@
         </c:forEach>
     </ul>
 </div>
-<%--<c:set var = "target" value = "5"/>--%>
-<%--<ul>--%>
-<%--    <c:forEach var = "num" begin = "1" end = "10">--%>
-<%--        <c:if test = "${num == target}">--%>
-<%--            num 숫자가 target--%>
-<%--        </c:if>--%>
-<%--    </c:forEach>--%>
-<%--</ul>--%>
+<form method="post" action="/logout">
+    <button type="submit">로그아웃</button>
+</form>
 </body>
 </html>
